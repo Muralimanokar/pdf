@@ -1,0 +1,13 @@
+
+{
+    "image":"file:///D:/CURRENT_PROJECT/PDF/img.jpg",
+    "vehicleno":"MH04BE3409",
+    "stationaddress":"nellikuppam,guduvanchery",
+    "city":"chennai",
+    "modeofpayment":"card",
+    "amountpaidinrupees":"200.00",
+    "fueltype":"petrol",
+    "perlitre":"95.00",
+    "volumeoflitreinperrupee":"10.5",
+    "country":"IND"
+}

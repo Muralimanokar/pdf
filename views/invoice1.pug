@@ -1,0 +1,235 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title Invoice template - Bootstrap 4
+  // Styles
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+  style.
+    .line {
+    border-bottom: 3px solid #000;
+    width: 100%;
+    }
+    .line-light {
+    width: 100%;
+    border-bottom: 1px solid #949597;
+    }
+    .line-end {
+    width: 100%;
+    border-bottom: 3px solid #f0c29e;
+    }
+    .data {
+    background-color: #dcdddf;
+    padding-left: 45px;
+    }
+    .data .data-box {
+    margin-top: 60px;
+    }
+    .data .data-box .data-separator {
+    border-top: 1px solid #949597;
+    width: 10%;
+    }
+    .content {
+    background-color: #f1f1f1;
+    padding-right: 45px;
+    }
+    .without-margin {
+    margin: 0 !important;
+    }
+    /* To break in pages, please use this class */
+    /* https://github.com/barryvdh/laravel-snappy/issues/2 */
+    .page
+    {
+    page-break-after: always;
+    page-break-inside: avoid;
+    }
+.container
+  .row
+#app.container.invoice
+  .row
+    // data
+    .col-4.data.py-4
+      .line.mt-4.mb-4
+      h1 INVOICE
+      .data-box
+        .data-separator.d-block.my-2
+        h4.text-muted.font-weight-light No.
+        h4.font-weight-bold 23123123123
+      .data-box
+        .data-separator.d-block.my-2
+        h4.text-muted.font-weight-light INVOICE DATE
+        h4.font-weight-bold January 05, 2018
+      .data-box
+        .data-separator.d-block.my-2
+        h4.text-muted.font-weight-light DUE DATE
+        h4.font-weight-bold January 25, 2018
+      .data-box
+        h5.font-weight-bold TERMS
+        p
+          | Mollit elit reprehenderit consectetur cupidatat anim qui deserunt duis. Veniam laboris id veniam in eu.
+      .data-box
+        h5.font-weight-bold PAYMENT METHODS
+        h6.font-weight-light PAYPAL
+        p paypal@example.com
+        h6.font-weight-light ACCOUNTING NUMBER
+        p 1234567890988
+        h6.font-weight-light QR CODE
+        img.img-fluid(src='/images/qr.png' alt='')
+      .data-box.align-text-bottom
+        h1.font-weight-bold.text-center My company name
+    // end data
+    // content
+    .col-8.content.py-4
+      .line.mt-4.mb-4
+      // header
+      .header
+        .row
+          .col-6.from
+            span.d-block.font-weight-light FROM:
+            h3 My Company
+            span.d-block.font-weight-light 123.123.12312
+            span.d-block.font-weight-light Address sasd asdas
+            span.d-block.font-weight-light 315 234 5677
+            span.d-block.font-weight-light juan@mycompany.com
+          .col-6.to
+            span.d-block.font-weight-light TO:
+            h3 Customer
+            span.d-block.font-weight-light 123.123.12312
+            span.d-block.font-weight-light Address sasd asdas
+            span.d-block.font-weight-light 315 234 5677
+            span.d-block.font-weight-light customer@people.com
+      // end header
+      // note
+      .row.my-4
+        .col-12
+          p.text-justify
+            | Quis sunt mollit nostrud aliqua consectetur voluptate eiusmod proident aute laboris non reprehenderit magna qui. Esse occaecat laboris laborum dolore excepteur enim laboris.
+      // end note
+      // items-header
+      .items-header
+        .row.mt-4.items-header.font-weight-bold
+          .col-12.my-2
+            .line
+          .col-6 DESCRIPTION
+          .col-2.text-center PRICE
+          .col-2.text-center QUANTITY
+          .col-2.text-right TOTAL
+          .col-12.my-2
+            .line
+      // end items-header
+      // items
+      .items
+        .row.mt-2.list-content
+          .col-6
+            p.without-margin Item of the invoice
+            p.without-margin.text-muted
+              small Date: 2018-02-14
+          .col-2.text-center $ 2.000
+          .col-2.text-center 2
+          .col-2.text-right $ 4.000
+        .row
+          .col-12.my-2
+            .line-light
+        .row.mt-2.list-content
+          .col-6
+            p.without-margin Item of the invoice
+            p.without-margin.text-muted
+              small Date: 2018-02-14
+          .col-2.text-center $ 2.000
+          .col-2.text-center 2
+          .col-2.text-right $ 4.000
+        .row
+          .col-12.my-2
+            .line-light
+        .row.mt-2.list-content
+          .col-6
+            p.without-margin Item of the invoice
+            p.without-margin.text-muted
+              small Date: 2018-02-14
+          .col-2.text-center $ 2.000
+          .col-2.text-center 2
+          .col-2.text-right $ 4.000
+        .row
+          .col-12.my-2
+            .line-light
+        .row.mt-2.list-content
+          .col-6
+            p.without-margin Item of the invoice
+            p.without-margin.text-muted
+              small Date: 2018-02-14
+          .col-2.text-center $ 2.000
+          .col-2.text-center 2
+          .col-2.text-right $ 4.000
+        .row
+          .col-12.my-2
+            .line-light
+        .row.mt-2.list-content
+          .col-6
+            p.without-margin Item of the invoice
+            p.without-margin.text-muted
+              small Date: 2018-02-14
+          .col-2.text-center $ 2.000
+          .col-2.text-center 2
+          .col-2.text-right $ 4.000
+        .row
+          .col-12.my-2
+            .line-light
+        .row.mt-2.list-content
+          .col-6
+            p.without-margin Item of the invoice
+            p.without-margin.text-muted
+              small Date: 2018-02-14
+          .col-2.text-center $ 2.000
+          .col-2.text-center 2
+          .col-2.text-right $ 4.000
+      // end items
+      // values
+      .values
+        .row
+          .col-12.my-2
+            .line
+        .row.mt-2.list-content
+          .col-10.font-weight-bold
+            | SUBTOTAL
+          .col-2.text-right.font-weight-bold $ 24.000
+        .row.mt-2.list-content
+          .col-10
+            | Discount 10%
+          .col-2.text-right -($ 2.400)
+        .row.mt-2.list-content
+          .col-10
+            | Taxes 19%
+          .col-2.text-right $ 4.104
+          .col-12.my-2
+            .line-end
+        .row.mt-2.list-content
+          .col-9
+            h3.font-weight-bold TOTAL
+          .col-3.text-right
+            h3.font-weight-bold $ 25.704
+      // end values
+      // signature
+      .signature.my-4
+        .row
+          .col-4.offset-8.text-right
+            img.img-fluid(src='/images/hj.png' alt='')
+          .col-12.text-right
+            h4.font-weight-bold Jhon Doe
+            span.d-block.font-weight-light CEO
+      // end signature
+      // gratitude
+      .gratitude.text-center.my-4
+        p.text-muted
+          | If you have any question about this invoice, please contact Jhon Doe to email jhon@mycompany.com, or to the mobile phone (057) 310 671 3456.
+        h2 Thank you
+      // end gratitude
+      // pagination
+      .invoice-pagination.text-right
+        p.text-muted.text-right Page 1 of 1
+      // end pagination
+    // end content
+// Scripts
+script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
+script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous')

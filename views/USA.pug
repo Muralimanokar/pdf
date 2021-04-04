@@ -1,0 +1,209 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Edit
+  style.
+    .invoice-box {
+    max-width: 250px;
+    margin: auto;
+    padding: 1px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    font-size: 15px;
+    line-height: 3px;
+    font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    color: #555;
+    background-color: white;
+    }
+    .invoice-box table {
+    width: 100%;
+    line-height: inherit;
+    text-align: left;
+    }
+    .line{
+    line-height: 20px;
+    }
+    .invoice-box table td {
+    padding: 5px;
+    vertical-align: top;
+    }
+    .invoice-box table tr td:nth-child(2) {
+    text-align: left;
+    }
+    .invoice-box table tr.top table td {
+    padding-bottom: 20px;
+    }
+    .invoice-box table tr.top table td.title {
+    font-size: 45px;
+    line-height: 45px;
+    color: #333;
+    }
+    .invoice-box table tr.information table td {
+    padding-bottom: 40px;
+    }
+    .invoice-box table tr.heading td {
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    }
+    .invoice-box table tr.details td {
+    padding-bottom: 20px;
+    }
+    .invoice-box table tr.item td{
+    border-bottom: 1px solid #eee;
+    }
+    .invoice-box table tr.item.last td {
+    border-bottom: none;
+    }
+    .invoice-box table tr.total td:nth-child(2) {
+    border-top: 2px solid #eee;
+    font-weight: bold;
+    }
+    @media only screen and (max-width: 600px) {
+    .invoice-box table tr.top table td {
+    width: 100%;
+    display: block;
+    text-align: center;
+    }
+    .invoice-box table tr.information table td {
+    width: 100%;
+    display: block;
+    text-align: center;
+    }
+    }
+    /** RTL **/
+    .rtl {
+    direction: rtl;
+    font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    }
+    .rtl table {
+    text-align: right;
+    }
+    .rtl table tr td:nth-child(2) {
+    text-align: right;
+    }
+    .center {
+    text-align: center;
+    }
+    .center1{
+    text-align:center;
+    font-size:10px;
+    }
+    .img {
+    display: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .left{
+    text-align: left;
+    }
+    .right{
+    text-align: right;
+    }
+    html, body {
+    width: 100%
+    }
+.invoice-box
+  table(cellpadding='0' cellspacing='0')
+    tr.top
+      td(colspan='2')
+        table
+          tr
+            td.title
+    .center
+      h1 Cost Gasoline
+      br
+      h5 Gas Station # 345435435
+      h5 #{stationaddress}
+      h5  SA 232343
+      h5 #{telno}
+      h5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--------------------------------------------------
+      table
+        tr
+          td Member#
+          td.align #{member}
+        tr
+          td Invoice#
+          td.align 15990
+        tr 
+          td Time
+          td#gettime.align 
+        tr 
+          td Date 
+          td#getdate.align
+        tr
+          td Auth#
+          td.align #{vehicleno}
+      h5 &nbsp;&nbsp;&nbsp;VISA ACCT #
+      h5 &nbsp;&nbsp;&nbsp;************#{cardno}
+      table.align
+        tr
+          td Pump
+          td Gallons
+          td Price
+        tr
+          td #{pump}
+          td #{gallons}
+          td $#{price}
+      br
+      br
+      br
+      br
+      br
+      br
+      table
+        tr
+          td Product
+          td
+          td.align Amount
+        tr
+          td #{product}
+          td &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$
+          td#demo.align
+      br
+      br
+      br
+      br
+      br
+      br
+      table
+        tr
+          td Total Sale
+          td &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$
+          td#demo1.align
+      h5 &nbsp;&nbsp;&nbsp;Sale- #{paymenttype} 
+      h5 &nbsp;&nbsp;&nbsp;Approved
+      h5 &nbsp;&nbsp;&nbsp;#{transid}
+      br
+      br
+      h5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--------------------------------------------------
+      .center.line
+        p
+          | Thank You
+          br
+          | For your purchase
+p#demo
+script.
+  var y = #{gallons}*#{price};
+  var z = y.toFixed(2);
+  document.getElementById("demo").innerHTML = z;
+p#demo1
+script.
+  var y = #{gallons}*#{price};
+  var z = y.toFixed(2);
+  document.getElementById("demo1").innerHTML = z;
+p#gettime
+script.
+  var currentdate = new Date();
+  var time=  ""+ currentdate.getHours() + ":"
+  + currentdate.getMinutes() + ":"
+  + currentdate.getSeconds();
+  document.getElementById("gettime").innerHTML = time;
+p#getdate
+script.
+  var currentdate = new Date();
+  var datetime = "" + currentdate.getDate() + "/"
+  + (currentdate.getMonth()+1)  + "/"
+  + currentdate.getFullYear() + " ";
+  document.getElementById("getdate").innerHTML = datetime;
+

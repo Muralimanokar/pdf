@@ -1,0 +1,214 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Edit
+  style.
+    .invoice-box {
+    max-width: 250px;
+    margin: auto;
+    padding: 1px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    font-size: 15px;
+    line-height: 3px;
+    font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    color: #555;
+    background-color: lightblue;
+    }
+    .invoice-box table {
+    width: 100%;
+    line-height: inherit;
+    text-align: left;
+    }
+    .line{
+    line-height: 20px;
+    }
+    .invoice-box table td {
+    padding: 5px;
+    vertical-align: top;
+    }
+    .invoice-box table tr td:nth-child(2) {
+    text-align: right;
+    }
+    .invoice-box table tr.top table td {
+    padding-bottom: 20px;
+    }
+    .invoice-box table tr.top table td.title {
+    font-size: 45px;
+    line-height: 45px;
+    color: #333;
+    }
+    .invoice-box table tr.information table td {
+    padding-bottom: 40px;
+    }
+    .invoice-box table tr.heading td {
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    }
+    .invoice-box table tr.details td {
+    padding-bottom: 20px;
+    }
+    .invoice-box table tr.item td{
+    border-bottom: 1px solid #eee;
+    }
+    .invoice-box table tr.item.last td {
+    border-bottom: none;
+    }
+    .invoice-box table tr.total td:nth-child(2) {
+    border-top: 2px solid #eee;
+    font-weight: bold;
+    }
+    @media only screen and (max-width: 600px) {
+    .invoice-box table tr.top table td {
+    width: 100%;
+    display: block;
+    text-align: center;
+    }
+    .invoice-box table tr.information table td {
+    width: 100%;
+    display: block;
+    text-align: center;
+    }
+    }
+    /** RTL **/
+    .rtl {
+    direction: rtl;
+    font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    }
+    .rtl table {
+    text-align: right;
+    }
+    .rtl table tr td:nth-child(2) {
+    text-align: left;
+    }
+    .center {
+    text-align: center;
+    }
+    .center1{
+    text-align:center;
+    font-size:10px;
+    }
+    .img {
+    display: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .left{
+    text-align: left;
+    }
+    .right{
+    text-align: right;
+    }
+    html, body {
+    width: 100%
+    }
+.invoice-box
+  img(src='#{image}'  width='150' height='150')
+  table(cellpadding='0' cellspacing='0')
+    tr.top
+      td(colspan='2')
+        table
+          tr
+            td.title
+    .center
+      h5 Welcome to BPCL!!
+      h5 CIN &nbsp;&nbsp;&nbsp;NO
+      h5 M432582986548GO55478588K
+      h5 SP&nbsp;&nbsp;#{city}&nbsp;
+      h5 &nbsp;&nbsp;#{stationaddress}&nbsp;&nbsp;
+      h5 &nbsp;&nbsp;#{city}&nbsp;&nbsp;
+      h5 CASH MEMO
+      br
+      h5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--------------------------------------------------
+      table 
+        tr
+          td#gettime.align
+          td#getdate.align
+        tr
+        tr
+          td VAT TIN NO:
+          td.align 12312131V
+        tr
+          td DSM:
+          td.align XXXXX
+        tr
+          td INV#:
+          td.align 8880144
+        tr
+          td BAY NOZL#:
+          td.align 34/9B
+        tr
+          td VEH SEG:
+          td.align SE4325 
+        tr
+          td VEH#:
+          td.align #{vehicleno}
+        tr
+          td MODE
+          td.align #{modeofpayment}
+      h5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--------------------------------------------------
+      table
+        tr
+          td PRODUCT:
+          td.align
+          td.align #{fueltype}
+        tr
+          td RATE/LTR
+          td.align
+          td.align ₹ #{perlitre}
+        tr
+          td AMOUNT(RS.):
+          td.align
+          td.align ₹#{amountpaidinrupees}
+        tr
+          td VOLUME(LTR.):
+          td.align
+          td#demo.align
+      h5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--------------------------------------------------
+      .center.line
+        p
+          | SAVE FUEL YAANI 
+          br
+          | SAVE MONEY&nbsp;&nbsp;!!
+          br
+          | THANK YOU&nbsp;&nbsp;!!
+          br
+          | THANKS FOR FUELLING
+          br
+          | WITH US.&nbsp;&nbsp;YOU CAN NOW
+          br
+          | CALL US ON 180022
+          br
+          |           6344&nbsp;&nbsp;(TOLL-FREE) FOR
+          br
+          | QUERIES/COMPLAINTS ON
+          br
+          | BPCL PETROL PUMPS,&nbsp;&nbsp;MAK
+          br
+          | LUBRICANTS OR INDL.
+          br
+          | PRODUCTS
+p#demo
+script.
+  var x = 1000/#{perlitre};
+  var y = x*#{amountpaidinrupees};
+  var z=parseInt(y);
+  document.getElementById("demo").innerHTML = z/1000;
+p#gettime
+script.
+  var currentdate = new Date();
+  var time=  ""+ currentdate.getHours() + ":"
+  + currentdate.getMinutes() + ":"
+  + currentdate.getSeconds();
+  document.getElementById("gettime").innerHTML = time;
+p#getdate
+script.
+  var currentdate = new Date();
+  var datetime = "" + currentdate.getDate() + "/"
+  + (currentdate.getMonth()+1)  + "/"
+  + currentdate.getFullYear() + " ";
+  document.getElementById("getdate").innerHTML = datetime;
+
+
+
